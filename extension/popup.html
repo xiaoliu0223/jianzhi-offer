@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header>
+    <span class="logo">⚔️</span>
+    <div>
+      <b>剑指OFFER · AI一键网申</b>
+      <span>复刻演示配套插件</span>
+    </div>
+  </header>
+
+  <div class="profile-box">
+    <p id="sum" class="sum">读取资料库中…</p>
+    <p id="detail" class="mini"></p>
+  </div>
+
+  <button id="fillBtn" class="primary">⚡ 填写本页表单</button>
+  <button id="learnBtn">🧠 学习本页修改</button>
+  <div class="row">
+    <button id="importBtn">📥 导入资料库</button>
+    <button id="exportBtn">📤 导出JSON</button>
+  </div>
+  <p class="tip">建议流程：先在演示站解析简历 → 导出JSON → 这里导入 → 打开企业网申页 → 填写本页 → 检查补填 → 学习本页修改</p>
+  <p id="status" class="status"></p>
+  <p class="foot">安全说明：不自动勾选任何同意条款；数据只存本地浏览器</p>
+  <input type="file" id="fileInput" accept=".json,application/json" hidden>
+  <script src="shared.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

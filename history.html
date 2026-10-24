@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0e0e10">
+  <title>投递进展表 - 剑指OFFER | 管理所有简历投递进展</title>
+  <link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y="0.9em" font-size="90">⚔️</text></svg>'>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <main class="content" data-active="history">
+
+    <section class="page-hero">
+      <span class="watermark" aria-hidden="true">🗂️</span>
+      <p class="crumb"><a href="index.html">首页</a> / 投递进展表</p>
+      <h1 class="page-title">投递进展表 <em>·</em> 校招全程管理</h1>
+      <p class="page-sub">每投一家就记一行：已投 → 笔试 → 面试 → Offer / 暂缓，自动统计各阶段数量，海投再也不会乱。</p>
+      <div style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap">
+        <a class="chip" href="campus.html">📊 校招表</a>
+        <a class="chip" href="campus.html?table=intern">🧳 实习表</a>
+        <a class="chip is-on" href="history.html">🗂️ 投递进展表</a>
+      </div>
+    </section>
+
+    <section class="reveal">
+      <div class="stat-cards" id="statCards"></div>
+
+      <div class="panel">
+        <div class="toolbar">
+          <div class="search"><input id="searchInput" type="text" placeholder="搜索公司 / 岗位" aria-label="搜索"></div>
+          <div id="statusFilter" style="display:flex;gap:8px;flex-wrap:wrap"></div>
+          <button class="btn btn-primary btn-sm" id="addBtn" type="button">＋ 记一笔投递</button>
+          <button class="btn btn-ghost btn-sm" id="exportBtn" type="button">📤 导出CSV</button>
+        </div>
+        <div id="tableArea"></div>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="js/common.js"></script>
+  <script src="js/history.js"></script>
+</body>
+</html>

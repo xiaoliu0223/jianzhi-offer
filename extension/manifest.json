@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "剑指OFFER · AI一键网申",
+  "version": "1.1.0",
+  "description": "剑指OFFER复刻演示配套插件：在企业招聘官网的网申表单上一键按资料库填写，支持把你的修正学习回资料库。与演示站资料库自动双向同步，所有数据仅存本地。",
+  "permissions": ["activeTab", "scripting", "storage"],
+  "content_scripts": [
+    {
+      "matches": ["http://localhost/*", "http://127.0.0.1/*"],
+      "js": ["bridge.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "剑指OFFER · AI一键网申"
+  }
+}

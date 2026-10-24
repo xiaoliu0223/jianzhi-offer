@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0e0e10">
+  <title>AI改简历 - 剑指OFFER | 简历魔改 · 过机筛优化 · 在线简历模板</title>
+  <link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y="0.9em" font-size="90">⚔️</text></svg>'>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <main class="content" data-active="resume">
+
+    <section class="page-hero no-print">
+      <span class="watermark" aria-hidden="true">✨</span>
+      <p class="crumb"><a href="index.html">首页</a> / AI改简历</p>
+      <h1 class="page-title">AI改简历 <em>·</em> 用魔法打败魔法</h1>
+      <p class="page-sub">三档魔改内容、JD关键词过机筛、精美模板导出PDF。默认本地规则引擎开箱即用，配置大模型Key后自动升级为真AI。</p>
+    </section>
+
+    <div class="seg no-print" role="tablist" aria-label="改简历模式">
+      <button class="is-active" data-mode="magic" role="tab" aria-selected="true" type="button">✨ 简历魔改</button>
+      <button data-mode="ats" role="tab" aria-selected="false" type="button">🎯 过机筛优化</button>
+      <button data-mode="ui" role="tab" aria-selected="false" type="button">🧩 在线模板</button>
+    </div>
+
+    <!-- ============ 模式一：简历魔改 ============ -->
+    <section class="panel" data-pane="magic">
+      <h3 class="panel-title">✨ 简历魔改AI · 3档力度</h3>
+      <p class="panel-sub">轻度＝动词升级与润色；中度＝STAR结构重组＋量化提醒；重度＝体系化拔高＋亮点总结。结果仅供参考，请人工复核真实性。</p>
+      <div class="field">
+        <div style="display:flex;justify-content:space-between;align-items:center">
+          <label for="magicIn">粘贴简历内容（每行一条经历最佳）</label>
+          <button class="btn btn-ghost btn-xs" id="magicLoadProfile" type="button">📄 载入资料库经历</button>
+        </div>
+        <textarea id="magicIn" style="min-height:180px" placeholder="例如：&#10;教育背景&#10;华中科技大学 计算机科学与技术 本科&#10;实习经历&#10;- 负责公司官网前端页面开发，使用 React 完成 5 个核心模块&#10;- 参与小程序性能优化，首屏加载时间降低 40%"></textarea>
+      </div>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:14px">
+        <span class="field-hint" style="margin:0">改写力度：</span>
+        <button class="chip" data-tier="1" type="button">轻度 · 润色</button>
+        <button class="chip is-on" data-tier="2" type="button">中度 · STAR</button>
+        <button class="chip" data-tier="3" type="button">重度 · 拔高</button>
+        <button class="btn btn-primary btn-sm" id="magicRun" type="button">⚡ 开始魔改</button>
+        <button class="btn btn-ghost btn-sm" id="magicCopy" type="button" style="display:none">复制结果</button>
+      </div>
+      <div id="magicOut"><div class="empty-state"><p class="ico">⚔️</p><b>粘贴简历后点「开始魔改」</b><p>改写引擎全本地运行，内容不离开你的浏览器</p></div></div>
+    </section>
+
+    <!-- ============ 模式二：过机筛 ============ -->
+    <section class="panel" data-pane="ats" hidden>
+      <h3 class="panel-title">🎯 过机筛优化AI · JD反向优化</h3>
+      <p class="panel-sub">很多企业用ATS系统机筛简历。粘贴目标岗位JD与你的简历，AI提取JD高频关键词并逐词比对，缺失关键词可一键生成补写建议。</p>
+      <div class="field-row">
+        <div class="field">
+          <label for="jdIn">目标岗位 JD（岗位职责与要求）</label>
+          <textarea id="jdIn" placeholder="粘贴岗位描述…"></textarea>
+        </div>
+        <div class="field">
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <label for="resumeIn">我的简历</label>
+            <button class="btn btn-ghost btn-xs" id="atsLoadProfile" type="button">📄 载入资料库</button>
+          </div>
+          <textarea id="resumeIn" placeholder="粘贴简历全文，或点右上角载入资料库…"></textarea>
+        </div>
+      </div>
+      <button class="btn btn-primary btn-sm" id="atsRun" type="button">🔍 开始比对</button>
+      <div id="atsOut" style="margin-top:18px">
+        <div class="empty-state"><p class="ico">🎯</p><b>粘贴JD和简历后开始比对</b><p>算法：JD关键词TF加权提取 × 简历逐词命中</p></div>
+      </div>
+    </section>
+
+    <!-- ============ 模式三：在线模板 ============ -->
+    <section class="panel print-keep" data-pane="ui" hidden style="padding-bottom:0">
+      <div class="resume-toolbar no-print">
+        <h3 class="panel-title" style="margin:0">🧩 在线简历模板</h3>
+        <div class="tpl-pick" aria-label="模板选择">
+          <button class="on" data-tpl="tpl-a" type="button">A</button>
+          <button data-tpl="tpl-b" type="button">B</button>
+          <button data-tpl="tpl-c" type="button">C</button>
+          <button data-tpl="tpl-d" type="button">D</button>
+        </div>
+        <span style="flex:1"></span>
+        <button class="btn btn-ghost btn-sm" id="uiLoadProfile" type="button">📄 载入我的简历</button>
+        <button class="btn btn-ghost btn-sm" id="uiAutoPage" type="button">📏 自动一页纸</button>
+        <button class="btn btn-ghost btn-sm" id="uiClear" type="button">清空</button>
+        <button class="btn btn-primary btn-sm" id="uiPrint" type="button">🖨 导出PDF / 打印</button>
+      </div>
+      <div class="sheet-wrap">
+        <div class="sheet tpl-a" id="sheet">
+          <header class="rhead">
+            <h1 contenteditable="true" data-ph="你的姓名">张剑指</h1>
+            <p class="rsub" contenteditable="true" data-ph="一句话介绍，如：2026届 · 前端开发 · 一周可到岗">2026届 · 前端开发工程师</p>
+            <p class="rcontact" contenteditable="true" data-ph="电话 · 邮箱 · 城市">138-xxxx-xxxx · me@example.com · 杭州</p>
+          </header>
+          <h2 contenteditable="false"><span>■</span>教育背景</h2>
+          <div class="ritem">
+            <b contenteditable="true" data-ph="学校">华中科技大学</b><span class="rmeta" contenteditable="true" data-ph="专业 · 学历 · 时间">计算机科学与技术 · 本科 · 2022.09-2026.06</span>
+            <ul><li contenteditable="true" data-ph="GPA、主修课程、荣誉">GPA 3.6/4.0 · 主修数据结构、操作系统、计算机网络</li></ul>
+          </div>
+          <h2 contenteditable="false"><span>■</span>技能清单</h2>
+          <p class="skills-line" contenteditable="true" data-ph="技能关键词，用 / 分隔">JavaScript / TypeScript / React / Node.js / MySQL / Git</p>
+          <h2 contenteditable="false"><span>■</span>实习经历</h2>
+          <div class="ritem">
+            <b contenteditable="true" data-ph="公司 · 岗位">星辰科技 · 前端开发实习生</b><span class="rmeta" contenteditable="true" data-ph="时间">2025.06-2025.09</span>
+            <ul>
+              <li contenteditable="true" data-ph="用动词开头写一条成果">负责官网前端开发，使用 React 交付 5 个核心模块</li>
+              <li contenteditable="true" data-ph="量化你的贡献">参与小程序性能优化，首屏加载时间降低 40%</li>
+            </ul>
+          </div>
+          <h2 contenteditable="false"><span>■</span>自我评价</h2>
+          <p class="skills-line" contenteditable="true" data-ph="2-3句话概括你的优势">学习能力强，熟悉前端工程化，能快速融入团队交付结果。</p>
+        </div>
+      </div>
+      <p class="auto-page-note no-print">纸面内容可直接点击编辑（所见即所得）· 内容自动保存在本地 · 导出PDF使用浏览器打印，选择「另存为PDF」</p>
+    </section>
+
+  </main>
+
+  <script src="js/common.js"></script>
+  <script src="js/ai-engine.js"></script>
+  <script src="js/resume.js"></script>
+</body>
+</html>

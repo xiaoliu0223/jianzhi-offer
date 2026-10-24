@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0e0e10">
+  <title>剑指OFFER - AI求职工具|AI填网申|AI找工作|AI改简历|校招实习汇总表</title>
+  <meta name="description" content="AI出鞘，直指Offer。为应届生打造的AI求职工具复刻演示：AI自动填写网申表单、实时搜索真实岗位并计算人岗匹配、简历三档魔改与ATS过机筛优化、校招实习资讯表格与投递进展管理。">
+  <link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y="0.9em" font-size="90">⚔️</text></svg>'>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <main class="content" data-active="index">
+
+    <!-- ================= Hero ================= -->
+    <section class="hero" id="top">
+      <canvas id="starfield" aria-hidden="true"></canvas>
+      <div class="hero-glow" aria-hidden="true"></div>
+      <div class="hero-inner">
+        <div class="hero-copy">
+          <p class="hero-badge"><span class="dot"></span>大学生AI求职工具 · 前端复刻演示</p>
+          <h2 class="hero-title">8个AI工具<br>你的求职<em>AI工作站</em></h2>
+          <p class="hero-sub">AI出鞘，直指Offer —— 自动填网申 · 实时真实岗位匹配 · 简历魔改 · 校招资讯表格</p>
+          <div class="hero-cta">
+            <a class="btn btn-primary btn-lg" href="autofill.html">免费使用全部工具</a>
+            <a class="btn btn-ghost btn-lg" href="#tools">浏览8个工具</a>
+          </div>
+          <ul class="hero-stats">
+            <li><strong>8</strong><span>个AI工具</span></li>
+            <li><strong>3</strong><span>张在线表格</span></li>
+            <li><strong>100%</strong><span>免费开放</span></li>
+            <li><strong>实时</strong><span>真实岗位数据</span></li>
+          </ul>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="art-robot">
+            <div class="art-head">
+              <div class="art-eye left"></div>
+              <div class="art-eye right"></div>
+              <div class="art-antenna"><i></i></div>
+            </div>
+            <div class="art-body">
+              <div class="art-screen">⚔️<span>OFFER</span></div>
+              <div class="art-arm left"></div>
+              <div class="art-arm right"></div>
+            </div>
+            <div class="art-base"></div>
+            <div class="art-shadow"></div>
+          </div>
+          <div class="art-chip c1">📝 一键填网申</div>
+          <div class="art-chip c2">🎯 真实岗位匹配</div>
+          <div class="art-chip c3">✨ 简历魔改</div>
+        </div>
+      </div>
+      <a class="scroll-hint" href="#tools" aria-label="向下滚动浏览工具"><span></span></a>
+    </section>
+
+    <!-- ================= 8个工具卡片 ================= -->
+    <section class="tools" id="tools" aria-label="8个AI工具">
+      <h2 class="sr-only">8个AI工具，你的求职AI工作站</h2>
+      <div class="tools-grid">
+
+        <a class="tool-card reveal" href="autofill.html">
+          <span class="tool-num">01</span>
+          <span class="tool-thumb t-purple"><span aria-hidden="true">📝</span></span>
+          <h3 class="tool-name">AI填网申 <b class="hot">HOT</b></h3>
+          <p class="tool-users">上传简历 · 自动解析 · 一键填表</p>
+          <p class="tool-desc">照着你的简历，把任何企业官网的网申表单填好</p>
+        </a>
+
+        <a class="tool-card reveal" href="job.html">
+          <span class="tool-num">02</span>
+          <span class="tool-thumb t-blue"><span aria-hidden="true">🤖</span></span>
+          <h3 class="tool-name">AI找工作 <b class="hot">HOT</b></h3>
+          <p class="tool-users">实时真实岗位 · 人岗匹配度</p>
+          <p class="tool-desc">对接公开招聘数据源，按你的简历算匹配分</p>
+        </a>
+
+        <a class="tool-card reveal" href="resume.html?mode=magic">
+          <span class="tool-num">03</span>
+          <span class="tool-thumb t-pink"><span aria-hidden="true">✨</span></span>
+          <h3 class="tool-name">简历魔改AI <b class="hot">HOT</b></h3>
+          <p class="tool-users">3档力度改写 · 规则引擎/大模型</p>
+          <p class="tool-desc">轻度润色、中度STAR重构、重度拔高随心选</p>
+        </a>
+
+        <a class="tool-card reveal" href="resume.html?mode=ats">
+          <span class="tool-num">04</span>
+          <span class="tool-thumb t-cyan"><span aria-hidden="true">🎯</span></span>
+          <h3 class="tool-name">过机筛优化AI</h3>
+          <p class="tool-users">JD关键词比对 · 缺失高亮</p>
+          <p class="tool-desc">对着岗位JD反向优化简历，提升机筛通过率</p>
+        </a>
+
+        <a class="tool-card reveal" href="resume.html?mode=ui">
+          <span class="tool-num">05</span>
+          <span class="tool-thumb t-green"><span aria-hidden="true">🧩</span></span>
+          <h3 class="tool-name">在线简历模板</h3>
+          <p class="tool-users">所见即所得 · 4套模板 · 导出PDF</p>
+          <p class="tool-desc">可视化在线简历编辑，一键载入我的简历</p>
+        </a>
+
+        <a class="tool-card reveal" href="campus.html">
+          <span class="tool-num">06</span>
+          <span class="tool-thumb t-orange"><span aria-hidden="true">📊</span></span>
+          <h3 class="tool-name">校招网申汇总表 <b class="hot">HOT</b></h3>
+          <p class="tool-users">在线表格 · 可增删改查导入导出</p>
+          <p class="tool-desc">管理你自己的校招资讯与网申入口</p>
+        </a>
+
+        <a class="tool-card reveal" href="campus.html?table=intern">
+          <span class="tool-num">07</span>
+          <span class="tool-thumb t-teal"><span aria-hidden="true">🧳</span></span>
+          <h3 class="tool-name">实习网申汇总表</h3>
+          <p class="tool-users">在线表格 · 与校招表独立管理</p>
+          <p class="tool-desc">实习信息单独一张表，互不干扰</p>
+        </a>
+
+        <a class="tool-card reveal" href="history.html">
+          <span class="tool-num">08</span>
+          <span class="tool-thumb t-purple"><span aria-hidden="true">🗂️</span></span>
+          <h3 class="tool-name">投递进展表 <b class="hot">HOT</b></h3>
+          <p class="tool-users">状态管线 · 统计面板</p>
+          <p class="tool-desc">已投、笔试、面试、Offer，全程一目了然</p>
+        </a>
+
+      </div>
+    </section>
+
+    <!-- ================= 站名分隔区 ================= -->
+    <section class="site-divider reveal">
+      <h1 class="site-title">剑指OFFER <i>·</i> 大学生AI求职工具</h1>
+      <p class="site-slogan">AI出鞘，直指Offer</p>
+    </section>
+
+    <!-- ================= 01 AI填网申 ================= -->
+    <section class="tool-section" id="sec-autofill">
+      <span class="watermark" aria-hidden="true">01</span>
+      <div class="section-head reveal">
+        <h3 class="section-title">AI工具01 · AI填网申 <i>·</i> 自动填写网申表单</h3>
+        <p class="section-sub">上传一份简历，AI解析成你的个人资料库，网申表单一键填</p>
+        <a class="btn btn-primary" href="autofill.html">前往 AI填网申</a>
+        <div class="feature-tabs" role="tablist" aria-label="AI填网申功能">
+          <button class="ftab is-active" role="tab" aria-selected="true" type="button">上传简历解析</button>
+          <button class="ftab" role="tab" aria-selected="false" type="button">一键智能填写</button>
+          <button class="ftab" role="tab" aria-selected="false" type="button">缺失字段自动学习</button>
+        </div>
+      </div>
+      <div class="section-body">
+        <div class="poster reveal" data-poster="autofill">
+          <div class="poster-inner"></div>
+        </div>
+        <div class="section-text reveal">
+          <p>每投一家企业官网，都要把同样的信息重新填一遍：几十个输入框、翻不到头的下拉列表，投上几十家，人都麻了。</p>
+          <p>剑指OFFER的思路是：先上传你的简历，AI把姓名、电话、学校、技能解析成一份本地资料库；之后在任何网申表单页，点一下「AI一键填写」，照着资料库逐字段填好。</p>
+          <p>重复枯燥的事交给AI，你只需检查一遍再提交。人均50家，海投不是梦！</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 02 AI找工作 ================= -->
+    <section class="tool-section flip" id="sec-job">
+      <span class="watermark" aria-hidden="true">02</span>
+      <div class="section-head reveal">
+        <h3 class="section-title">AI工具02 · AI找工作 <i>·</i> 真实岗位实时搜索</h3>
+        <p class="section-sub">对接公开招聘数据源，搜的是真实在招岗位，按你的简历算匹配度</p>
+        <a class="btn btn-primary" href="job.html">前往 AI找工作</a>
+        <div class="feature-tabs" role="tablist" aria-label="AI找工作功能">
+          <button class="ftab is-active" role="tab" aria-selected="true" type="button">真实岗位搜索</button>
+          <button class="ftab" role="tab" aria-selected="false" type="button">简历人岗匹配</button>
+          <button class="ftab" role="tab" aria-selected="false" type="button">直达申请链接</button>
+        </div>
+      </div>
+      <div class="section-body">
+        <div class="poster reveal" data-poster="job">
+          <div class="poster-inner"></div>
+        </div>
+        <div class="section-text reveal">
+          <p>大多数招聘平台的AI都是给HR做的——帮公司更高效地筛人。剑指OFFER反着来：站在求职者的角度用AI。</p>
+          <p>岗位数据来自公开的真实招聘接口（Arbeitnow / Remotive，也可在设置里换成你自己的数据源），搜到的每一条都是实时在招的真实岗位，附直达申请链接。</p>
+          <p>不会选岗位？先去AI填网申上传简历，AI会提取你的技能关键词，给每个真实岗位算出匹配度，匹配逻辑全在你本地浏览器里完成。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 03-05 AI改简历 ================= -->
+    <section class="tool-section" id="sec-resume">
+      <span class="watermark" aria-hidden="true">03</span>
+      <div class="section-head reveal">
+        <h3 class="section-title">AI工具03-05 · AI改简历 <i>·</i> 三个工具精修简历</h3>
+        <p class="section-sub">三档魔改内容、JD关键词过机筛、精美模板导出PDF，用魔法打败魔法</p>
+        <a class="btn btn-primary" href="resume.html">前往 AI改简历</a>
+      </div>
+      <div class="trio-grid">
+        <article class="trio-card reveal">
+          <span class="trio-tag">AI工具03</span>
+          <h4>简历魔改AI <i>·</i> 3档智能改写</h4>
+          <p>轻度润色：动词升级、标点规范；中度：STAR结构重组＋量化提醒；重度：体系化拔高＋亮点总结。默认走本地规则引擎，配置大模型Key后自动切换真AI。</p>
+        </article>
+        <article class="trio-card reveal">
+          <span class="trio-tag">AI工具04</span>
+          <h4>过机筛优化AI <i>·</i> JD反向优化</h4>
+          <p>粘贴目标岗位JD和简历，AI提取JD高频关键词，与你的简历逐词比对：命中了多少、缺了哪些一目了然，缺失关键词还能一键生成补写建议。</p>
+        </article>
+        <article class="trio-card reveal">
+          <span class="trio-tag">AI工具05</span>
+          <h4>在线简历模板 <i>·</i> 所见即所得</h4>
+          <p>4套精选模板（简约/双栏/渐变/衬线）随点随换，直接在纸上编辑，支持一键载入资料库里的简历、自动缩排一页纸、浏览器打印导出PDF。</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ================= 06-08 网申表格 ================= -->
+    <section class="tool-section flip" id="sec-campus">
+      <span class="watermark" aria-hidden="true">06</span>
+      <div class="section-head reveal">
+        <h3 class="section-title">AI工具06-08 · 在线表格 <i>·</i> 求职进度管理</h3>
+        <p class="section-sub">校招表、实习表、投递进展表，数据存在你自己的浏览器里</p>
+        <a class="btn btn-primary" href="campus.html">前往 在线表格</a>
+      </div>
+      <div class="quad-grid">
+        <article class="quad-card reveal">
+          <span class="trio-tag">AI工具06</span>
+          <h4>校招网申汇总表</h4>
+          <p>公司、岗位、批次、链接、备注逐行管理，支持搜索筛选排序与CSV导入导出</p>
+        </article>
+        <article class="quad-card reveal">
+          <span class="trio-tag">AI工具07</span>
+          <h4>实习网申汇总表</h4>
+          <p>和校招表同款能力，实习信息独立一张表，随时切换</p>
+        </article>
+        <article class="quad-card reveal">
+          <span class="trio-tag">AI工具08</span>
+          <h4>投递进展表</h4>
+          <p>已投→笔试→面试→Offer状态管线，自动统计各阶段数量</p>
+        </article>
+        <article class="quad-card reveal" style="display:flex;align-items:center;justify-content:center;text-align:center;">
+          <div>
+            <p style="font-size:30px;margin-bottom:8px;">🔒</p>
+            <h4>数据完全本地</h4>
+            <p>所有表格数据仅保存在你的浏览器，不上传任何服务器</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="js/common.js"></script>
+  <script src="js/ai-engine.js"></script>
+  <script src="js/home.js"></script>
+</body>
+</html>

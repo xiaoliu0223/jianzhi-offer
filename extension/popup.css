@@ -1,0 +1,44 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  width: 300px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft YaHei", sans-serif;
+  background: #141418; color: #f2f2f5;
+  padding: 14px;
+}
+header { display: flex; align-items: center; gap: 9px; margin-bottom: 12px; }
+header .logo {
+  width: 34px; height: 34px; border-radius: 10px; font-size: 17px;
+  background: linear-gradient(135deg, #7c6cf0, #b96cf0);
+  display: flex; align-items: center; justify-content: center;
+}
+header b { display: block; font-size: 14px; }
+header span { font-size: 11px; color: #8b8b99; }
+
+.profile-box {
+  background: #1d1d23; border: 1px solid #2c2c34; border-radius: 12px;
+  padding: 10px 12px; margin-bottom: 12px;
+}
+.sum { font-size: 12.5px; font-weight: 700; color: #a78bfa; }
+.mini { font-size: 11.5px; color: #a6a6b3; margin-top: 4px; line-height: 1.5; word-break: break-all; }
+
+button {
+  width: 100%; padding: 10px 0; margin-bottom: 8px;
+  border-radius: 999px; border: 1px solid #2c2c34;
+  background: #1d1d23; color: #f2f2f5;
+  font-size: 13px; font-weight: 600; cursor: pointer; transition: 0.15s;
+}
+button:hover { border-color: #7c6cf0; color: #a78bfa; }
+button.primary {
+  background: linear-gradient(135deg, #7c6cf0, #b96cf0);
+  border: none; color: #fff; font-size: 14px;
+  box-shadow: 0 0 24px rgba(124, 108, 240, 0.35);
+}
+button.primary:hover { filter: brightness(1.1); }
+.row { display: flex; gap: 8px; }
+.row button { flex: 1; }
+
+.tip { font-size: 10.5px; color: #71717e; line-height: 1.6; margin: 8px 0; }
+.status { font-size: 12px; font-weight: 600; color: #52c98a; min-height: 18px; line-height: 1.5; }
+.foot { font-size: 10px; color: #55555f; border-top: 1px solid #232329; padding-top: 8px; }
+a { color: #a78bfa; font-size: 12px; text-decoration: none; display: inline-block; margin-bottom: 6px; }
+a:hover { text-decoration: underline; }

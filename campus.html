@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0e0e10">
+  <title>网申汇总表 - 剑指OFFER | 校招/实习资讯在线表格</title>
+  <link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y="0.9em" font-size="90">⚔️</text></svg>'>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <main class="content" data-active="campus">
+
+    <section class="page-hero">
+      <span class="watermark" aria-hidden="true">📊</span>
+      <p class="crumb"><a href="index.html">首页</a> / 网申表格</p>
+      <h1 class="page-title" id="pageTitle">校招网申汇总表</h1>
+      <p class="page-sub">管理你自己的校招资讯：公司、岗位、批次、网申链接、截止时间。支持搜索筛选排序、CSV导入导出，数据只存在你的浏览器。</p>
+      <div style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap">
+        <a class="chip is-on" id="tabCampus" href="campus.html">📊 校招表</a>
+        <a class="chip" id="tabIntern" href="campus.html?table=intern">🧳 实习表</a>
+        <a class="chip" href="history.html">🗂️ 投递进展表</a>
+      </div>
+    </section>
+
+    <section class="panel reveal">
+      <div class="toolbar">
+        <div class="search"><input id="searchInput" type="text" placeholder="搜索公司 / 岗位 / 备注" aria-label="搜索"></div>
+        <select id="industrySel" aria-label="行业筛选"><option value="">全部行业</option></select>
+        <select id="sortSel" aria-label="排序">
+          <option value="added">按添加顺序</option>
+          <option value="company">按公司名</option>
+          <option value="deadline">按截止时间</option>
+        </select>
+        <button class="btn btn-primary btn-sm" id="addBtn" type="button">＋ 添加记录</button>
+        <button class="btn btn-ghost btn-sm" id="importBtn" type="button">📥 导入CSV</button>
+        <button class="btn btn-ghost btn-sm" id="exportBtn" type="button">📤 导出CSV</button>
+        <button class="btn btn-ghost btn-sm" id="sampleBtn" type="button">✨ 载入示例数据</button>
+      </div>
+
+      <div id="tableArea"></div>
+      <p class="field-hint" id="countInfo" style="margin-top:10px"></p>
+    </section>
+
+  </main>
+
+  <script src="js/common.js"></script>
+  <script src="js/campus.js"></script>
+</body>
+</html>
